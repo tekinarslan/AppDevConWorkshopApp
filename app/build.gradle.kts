@@ -1,3 +1,6 @@
+import extensions.addCoreDesignSystemModule
+import extensions.addCoreUIModule
+
 plugins {
     alias(libs.plugins.appdevcon.application)
     alias(libs.plugins.appdevcon.compose)
@@ -5,4 +8,8 @@ plugins {
 }
 dependencyGuard {
     configuration("prodReleaseRuntimeClasspath")
+}
+dependencies{
+    addCoreUIModule()
+    addCoreDesignSystemModule()
 }

@@ -1,4 +1,4 @@
-package com.holidaypirates.appdevconworkshopapp.ui.theme
+package com.holidaypirates.designsystem.theme
 
 import android.app.Activity
 import android.os.Build

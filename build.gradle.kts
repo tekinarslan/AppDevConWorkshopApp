@@ -7,4 +7,5 @@ plugins {
     alias(libs.plugins.org.jetbrains.kotlin.jvm) apply false
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.dependencyGuard) apply false
+    alias(libs.plugins.kotlin.serialization) apply false
 }

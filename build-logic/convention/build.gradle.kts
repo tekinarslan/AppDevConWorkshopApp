@@ -4,6 +4,8 @@ plugins {
     `kotlin-dsl`
 }
 
+group = "com.holidaypirates.appdevconworkshopapp.buildlogic"
+
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17

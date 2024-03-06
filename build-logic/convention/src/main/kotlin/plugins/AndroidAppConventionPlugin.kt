@@ -13,7 +13,7 @@ class AndroidAppConventionPlugin : Plugin<Project> {
         with(project) {
             with(pluginManager) {
                 apply("com.android.application")
-                apply("kotlin-android")
+                apply("org.jetbrains.kotlin.android")
                 apply("com.dropbox.dependency-guard")
             }
             extensions.configure<ApplicationExtension> {

@@ -22,3 +22,10 @@ dependencyResolutionManagement {
 
 rootProject.name = "AppDevConWorkshopApp"
 include(":app")
+include(":core:common")
+include(":core:ui")
+include(":core:designsystem")
+include(":core:network")
+include(":core:domain")
+include(":core:data")
+include(":core:model")
