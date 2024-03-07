@@ -4,20 +4,17 @@ import com.holidaypirates.model.Movies
 import retrofit2.Response
 import javax.inject.Inject
 
-class RemoteDataSource @Inject constructor(
-    private val nextflixService: NextflixService
-) {
+class RemoteDataSource @Inject constructor(private val movieService: MovieService) {
 
     suspend fun getPopularMovies(page: Int): Response<Movies> {
-        return nextflixService.getPopular(page = page).asMovies()
+        return movieService.getPopular(page = page).asMovies()
     }
 
     suspend fun getNowPlaying(page: Int): Response<Movies> {
-        return nextflixService.getNowPlaying(page = page).asMovies()
+        return movieService.getNowPlaying(page = page).asMovies()
     }
 
     suspend fun getUpcoming(page: Int): Response<Movies> {
-        return nextflixService.getUpcoming(page = page).asMovies()
+        return movieService.getUpcoming(page = page).asMovies()
     }
-
 }

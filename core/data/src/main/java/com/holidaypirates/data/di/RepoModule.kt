@@ -1,7 +1,7 @@
 package com.holidaypirates.data.di
 
-import com.holidaypirates.data.remote.NextflixGateway
-import com.holidaypirates.data.remote.NextflixRepository
+import com.holidaypirates.data.remote.MovieGateway
+import com.holidaypirates.data.remote.MovieRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,7 +14,5 @@ object RepoModule {
 
     @Provides
     @Singleton
-    fun provideNextflixGateway(
-        nextflixRepository: NextflixRepository
-    ): NextflixGateway = nextflixRepository
+    fun provideMovieGateway(movieRepository: MovieRepository): MovieGateway = movieRepository
 }

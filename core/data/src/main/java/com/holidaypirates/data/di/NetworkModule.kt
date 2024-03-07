@@ -1,6 +1,6 @@
 package com.holidaypirates.data.di
 
-import com.holidaypirates.data.remote.NextflixService
+import com.holidaypirates.data.remote.MovieService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -49,8 +49,7 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideOkHttpClient(
-        authInterceptor: Interceptor,
-        loggingInterceptor: HttpLoggingInterceptor
+        authInterceptor: Interceptor, loggingInterceptor: HttpLoggingInterceptor
     ): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(authInterceptor)
@@ -70,7 +69,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideDisneyService(retrofit: Retrofit): NextflixService {
-        return retrofit.create(NextflixService::class.java)
+    fun provideDisneyService(retrofit: Retrofit): MovieService {
+        return retrofit.create(MovieService::class.java)
     }
 }

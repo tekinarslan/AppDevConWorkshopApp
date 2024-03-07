@@ -4,9 +4,9 @@ import com.holidaypirates.model.Movies
 import javax.inject.Inject
 import retrofit2.Response
 
-class NextflixRepository @Inject constructor(
+class MovieRepository @Inject constructor(
     private val remoteDataSource: RemoteDataSource
-): NextflixGateway {
+): MovieGateway {
 
     override suspend fun getPopularMovies(page: Int): Response<Movies> {
         return remoteDataSource.getPopularMovies(page)
