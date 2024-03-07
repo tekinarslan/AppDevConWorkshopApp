@@ -40,8 +40,14 @@ androidxTestRules = "1.6.1"
 androidxTestRunner = "1.6.2"
 androidxUiAutomator = "2.3.0"
 androidxEspresso = "3.5.1"
+apollo = "4.0.0-beta.4"
 
 [libraries]
+
+#Graphql libraries
+apollo-runtime = { group= "com.apollographql.apollo3" , name="apollo-runtime", version.ref = "apollo" }
+apollo-normalized-cache = { group= "com.apollographql.apollo3", name = "apollo-normalized-cache-sqlite", version.ref = "apollo" }
+
 okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
 scalars = { group = "com.squareup.retrofit2", name = "converter-scalars", version.ref = "retrofit" }
 retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }

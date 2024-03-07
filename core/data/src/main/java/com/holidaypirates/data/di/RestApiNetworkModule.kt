@@ -1,6 +1,6 @@
 package com.holidaypirates.data.di
 
-import com.holidaypirates.data.remote.MovieService
+import com.holidaypirates.data.remote.rest.MovieService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,7 +14,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object NetworkModule {
+object RestApiNetworkModule {
     const val TMDB_BASE_URL = "https://api.themoviedb.org/3/"
 
     @Singleton

@@ -1,4 +1,4 @@
-package com.holidaypirates.data.remote
+package com.holidaypirates.data.remote.rest
 
 import com.holidaypirates.model.Movie
 import com.holidaypirates.model.MoviesResponse
