@@ -9,7 +9,10 @@ android {
 }
 
 dependencies {
-    api(projects.core.domain)
+    implementation(projects.core.domain)
     implementation(projects.core.ui)
-    implementation(libs.compose.paging)
+
+    testImplementation(projects.core.testing)
+
+    androidTestImplementation(projects.core.testing)
 }

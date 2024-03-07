@@ -64,7 +64,6 @@ fun NowPlayingScreen(movieList: LazyPagingItems<NetworkMovie>) {
             }
 
             if (error != null) {
-                //TODO: add error handler
                 item {
                     Toast.makeText(
                         LocalContext.current,
