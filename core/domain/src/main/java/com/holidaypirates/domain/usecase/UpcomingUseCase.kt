@@ -1,7 +1,7 @@
 package com.holidaypirates.domain.usecase
 
 import com.holidaypirates.model.Movies
-import com.holidaypirates.domain.gateway.NextflixGateway
+import com.holidaypirates.data.remote.NextflixGateway
 import retrofit2.Response
 import javax.inject.Inject
 

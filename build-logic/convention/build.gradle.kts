@@ -37,6 +37,10 @@ gradlePlugin {
                 id = "appdevcon.lib.compose"
                 implementationClass = "plugins.AndroidLibraryComposeConventionPlugin"
             }
+            register("androidFeature") {
+                id = "appdevcon.android.feature"
+                implementationClass = "plugins.AndroidFeatureConventionPlugin"
+            }
             register("androidLib") {
                 id = "appdevcon.android.library"
                 implementationClass = "plugins.AndroidLibraryConventionPlugin"

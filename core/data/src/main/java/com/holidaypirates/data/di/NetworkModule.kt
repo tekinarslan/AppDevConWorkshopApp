@@ -1,4 +1,4 @@
-package com.holidaypirates.network.di
+package com.holidaypirates.data.di
 
 import com.holidaypirates.data.remote.NextflixService
 import dagger.Module

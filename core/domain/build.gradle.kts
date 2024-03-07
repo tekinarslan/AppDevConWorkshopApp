@@ -1,8 +1,6 @@
-import extensions.addCoreDataModuleAsApi
-import extensions.addCoreModelModuleAsApi
-
 plugins {
     alias(libs.plugins.appdevcon.android.library)
+    alias(libs.plugins.appdevcon.hilt)
 }
 
 android {
@@ -10,8 +8,6 @@ android {
 }
 
 dependencies {
-    addCoreDataModuleAsApi()
-    addCoreModelModuleAsApi()
-
-    implementation(libs.javax.inject)
+    api(projects.core.model)
+    implementation(projects.core.data)
 }

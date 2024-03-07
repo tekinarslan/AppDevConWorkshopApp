@@ -16,6 +16,7 @@ internal fun Project.configureAndroidCompose(
             val bom = versionCatalog().findLibrary("androidx-compose-bom").get()
             add("implementation", platform(bom))
             add("androidTestImplementation", platform(bom))
+            add("implementation", versionCatalog().findLibrary("androidx-activity-compose").get())
             add("implementation", versionCatalog().findLibrary("androidx-compose-ui-tooling-preview").get())
             add("debugImplementation", versionCatalog().findLibrary("androidx-compose-ui-tooling").get())
         }

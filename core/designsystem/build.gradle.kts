@@ -32,6 +32,7 @@ dependencies {
     api(libs.androidx.compose.material3)
     api(libs.androidx.compose.runtime)
     api(libs.androidx.compose.ui.util)
+    api(libs.accompanist.navigation.animation)
     api(libs.androidx.core.ktx)
 
     implementation(libs.coil.kt.compose)

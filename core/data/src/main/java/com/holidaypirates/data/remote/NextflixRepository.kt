@@ -1,8 +1,6 @@
-package com.holidaypirates.data
+package com.holidaypirates.data.remote
 
-import com.holidaypirates.data.remote.RemoteDataSource
 import com.holidaypirates.model.Movies
-import com.holidaypirates.domain.gateway.NextflixGateway
 import javax.inject.Inject
 import retrofit2.Response
 

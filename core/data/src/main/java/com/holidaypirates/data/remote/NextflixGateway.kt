@@ -1,4 +1,4 @@
-package com.holidaypirates.domain.gateway
+package com.holidaypirates.data.remote
 
 import com.holidaypirates.model.Movies
 import retrofit2.Response
