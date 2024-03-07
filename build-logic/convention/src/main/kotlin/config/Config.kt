@@ -4,7 +4,7 @@ import org.gradle.api.JavaVersion
 
 object Config {
     val android = AndroidConfig(
-        minSdkVersion = 24,
+        minSdkVersion = 26,
         targetSdkVersion = 34,
         compileSdkVersion = 34,
         applicationId = "com.holidaypirates.appdevconworkshopap",

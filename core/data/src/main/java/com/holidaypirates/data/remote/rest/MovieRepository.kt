@@ -1,23 +1,23 @@
-package com.holidaypirates.data.remote
+package com.holidaypirates.data.remote.rest
 
 import com.holidaypirates.model.Movies
 import javax.inject.Inject
 import retrofit2.Response
 
 class MovieRepository @Inject constructor(
-    private val remoteDataSource: RemoteDataSource
+    private val movieRemoteDataSource: MovieRemoteDataSource
 ): MovieGateway {
 
     override suspend fun getPopularMovies(page: Int): Response<Movies> {
-        return remoteDataSource.getPopularMovies(page)
+        return movieRemoteDataSource.getPopularMovies(page)
     }
 
     override suspend fun getNowPlayingMovies(page: Int): Response<Movies> {
-        return remoteDataSource.getNowPlaying(page)
+        return movieRemoteDataSource.getNowPlaying(page)
     }
 
     override suspend fun getUpcomingMovies(page: Int): Response<Movies> {
-        return remoteDataSource.getUpcoming(page)
+        return movieRemoteDataSource.getUpcoming(page)
     }
 
 }

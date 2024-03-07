@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.holidaypirates.appdevconworkshopap.feature.one"
+    namespace = "com.holidaypirates.appdevconworkshopap.feature.with.rest"
 }
 
 dependencies {

@@ -1,10 +1,10 @@
-package com.holidaypirates.data.remote
+package com.holidaypirates.data.remote.rest
 
 import com.holidaypirates.model.Movies
 import retrofit2.Response
 import javax.inject.Inject
 
-class RemoteDataSource @Inject constructor(private val movieService: MovieService) {
+class MovieRemoteDataSource @Inject constructor(private val movieService: MovieService) {
 
     suspend fun getPopularMovies(page: Int): Response<Movies> {
         return movieService.getPopular(page = page).asMovies()

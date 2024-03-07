@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.appdevcon.android.library)
     alias(libs.plugins.appdevcon.hilt)
+    id("com.apollographql.apollo3") version "4.0.0-beta.4"
 }
 
 android {
@@ -29,4 +30,12 @@ dependencies {
     implementation(libs.okhttp.logging)
     implementation(libs.retrofit.core)
     implementation(libs.retrofit.kotlin.serialization)
+    implementation(libs.apollo.runtime)
+    implementation(libs.apollo.normalized.cache)
+}
+
+apollo {
+    service("service") {
+        packageName.set("com.holidaypirates.data")
+    }
 }
