@@ -1,7 +1,3 @@
-##SpeakerDeck
-
-https://speakerdeck.com/tekinarslan/enhancing-network-communication-in-android-transitioning-from-rest-to-graphql
-
 ## Tech Stack
 
 * Multi-Module-Architecture
@@ -16,6 +12,5 @@ https://speakerdeck.com/tekinarslan/enhancing-network-communication-in-android-t
 * AndroidX
 * Retrofit
 * Coil
+* Apollo GraphQL sdk
 
-## TMBD API
-You have to add TMBD api key. 
