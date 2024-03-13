@@ -1,0 +1,28 @@
+query GetCharacters($page: Int!) {
+    characters(page: $page) {
+        info {
+            pages, count, next
+        }
+        results {
+            ...CharacterDetail
+        }
+    }
+}
+
+fragment CharacterDetail on Character {
+    id, name, image, status, species, type, gender
+    episode {
+        id, name, air_date
+    }
+    location {
+        id, name
+    }
+    origin {
+        name
+    }
+}
+
+
+
+
+
