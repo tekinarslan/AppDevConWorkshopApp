@@ -4,6 +4,8 @@ plugins {
     `kotlin-dsl`
 }
 
+group = "com.holidaypirates.appdevconworkshopapp.buildlogic"
+
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
@@ -34,6 +36,10 @@ gradlePlugin {
             register("androidLibCompose") {
                 id = "appdevcon.lib.compose"
                 implementationClass = "plugins.AndroidLibraryComposeConventionPlugin"
+            }
+            register("androidFeature") {
+                id = "appdevcon.android.feature"
+                implementationClass = "plugins.AndroidFeatureConventionPlugin"
             }
             register("androidLib") {
                 id = "appdevcon.android.library"
