@@ -13,7 +13,7 @@ import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.holidaypirates.model.NetworkMovie
-import com.holidaypirates.ui.MovieItem
+import com.holidaypirates.ui.MovieItemView
 
 @Composable
 fun NowPlayingRoute(viewModel: NowPlayingViewModel = hiltViewModel()) {
@@ -26,7 +26,7 @@ fun NowPlayingScreen(movieList: LazyPagingItems<NetworkMovie>) {
     LazyColumn(modifier = Modifier.background(color = Color.DarkGray)) {
         items(movieList.itemCount) { index ->
             movieList[index]?.let { movie ->
-                MovieItem(
+                MovieItemView(
                     posterPath = movie.posterUrl,
                     title = movie.title,
                     desc = movie.overview,

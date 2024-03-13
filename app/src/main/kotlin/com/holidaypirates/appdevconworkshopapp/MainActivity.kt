@@ -8,7 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.holidaypirates.designsystem.theme.AppDevconWorkshopAppTheme
-import com.holidaypirates.one.ui.NowPlayingRoute
+import com.holidaypirates.graphql.ui.RickyAndMortyRoute
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    NowPlayingRoute()
+                    RickyAndMortyRoute()
                 }
             }
         }

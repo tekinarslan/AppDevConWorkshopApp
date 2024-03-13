@@ -1,6 +1,5 @@
 package com.holidaypirates.ui
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Arrangement.Top
@@ -12,22 +11,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import coil.compose.rememberImagePainter
-import com.holidaypirates.designsystem.theme.Typography
-
+import coil.compose.AsyncImage
+import com.holidaypirates.appdevconworkshopap.core.designsystem.R
 
 @Composable
-fun MovieItem(
-    posterPath: String,
-    title: String,
-    desc: String,
-    rating: String
-) {
+fun RickyItemView(name: String, image: String) {
     Box(
         modifier = Modifier
             .padding(horizontal = 8.dp, vertical = 4.dp)
@@ -41,17 +33,16 @@ fun MovieItem(
                 .padding(all = 4.dp)
                 .fillMaxSize()
         ) {
-            Image(
+            AsyncImage(
+                model = image,
+                contentDescription = "contentDescription",
+                placeholder = painterResource(R.drawable.ic_broken_image_24),
                 modifier = Modifier
                     .padding(8.dp)
                     .fillMaxHeight()
                     .aspectRatio(0.7f)
                     .clip(RoundedCornerShape(8.dp)),
-                painter = rememberImagePainter(
-                    data = posterPath
-                ),
                 contentScale = ContentScale.Crop,
-                contentDescription = ""
             )
 
             Column(
@@ -61,31 +52,13 @@ fun MovieItem(
                     .fillMaxHeight()
             ) {
                 Text(
-                    text = title,
+                    text = name,
                     style = MaterialTheme.typography.titleLarge.copy(
                         color = Color.Black,
                         fontWeight = FontWeight.Bold
                     )
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-
-                RatingBar(
-                    rating = rating,
-                    modifier = Modifier.fillMaxWidth()
-                )
-
-                Text(
-                    text = desc,
-                    modifier = Modifier
-                        .padding(vertical = 8.dp),
-                    maxLines = 6,
-                    overflow = TextOverflow.Ellipsis,
-                    style = Typography.bodyMedium.copy(
-                        color = Color.Black
-                    ),
-                    fontWeight = FontWeight.SemiBold,
-                    letterSpacing = 0.6.sp
-                )
             }
         }
     }
@@ -94,8 +67,10 @@ fun MovieItem(
 @Preview
 @Composable
 private fun MovieItemPreview() {
-    MovieItem(posterPath = "PosterPath",
+    MovieItemView(
+        posterPath = "PosterPath",
         title = "MovieTitle",
         desc = "Movie Description",
-        rating = "4.5")
+        rating = "4.5"
+    )
 }

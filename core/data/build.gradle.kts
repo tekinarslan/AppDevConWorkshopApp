@@ -24,14 +24,14 @@ dependencies {
     api(libs.scalars)
     api(libs.okhttp.logging)
 
+    api(libs.apollo.runtime)
+    implementation(libs.apollo.normalized.cache)
     implementation(libs.coil.kt)
     implementation(libs.coil.kt.svg)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.okhttp.logging)
     implementation(libs.retrofit.core)
     implementation(libs.retrofit.kotlin.serialization)
-    implementation(libs.apollo.runtime)
-    implementation(libs.apollo.normalized.cache)
 }
 
 apollo {
