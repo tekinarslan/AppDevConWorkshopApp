@@ -1,4 +1,4 @@
-package com.holidaypirates.graphql.data
+package com.holidaypirates.one.data
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState

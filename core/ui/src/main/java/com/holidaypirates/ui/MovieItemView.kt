@@ -1,6 +1,5 @@
 package com.holidaypirates.ui
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Arrangement.Top
@@ -12,17 +11,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import coil.compose.rememberImagePainter
+import coil.compose.AsyncImage
+import com.holidaypirates.appdevconworkshopap.core.designsystem.R
 import com.holidaypirates.designsystem.theme.Typography
 
 
 @Composable
-fun MovieItem(
+fun MovieItemView(
     posterPath: String,
     title: String,
     desc: String,
@@ -41,17 +42,16 @@ fun MovieItem(
                 .padding(all = 4.dp)
                 .fillMaxSize()
         ) {
-            Image(
+            AsyncImage(
+                model = posterPath,
+                contentDescription = "contentDescription",
+                placeholder = painterResource(R.drawable.ic_broken_image_24),
                 modifier = Modifier
                     .padding(8.dp)
                     .fillMaxHeight()
                     .aspectRatio(0.7f)
                     .clip(RoundedCornerShape(8.dp)),
-                painter = rememberImagePainter(
-                    data = posterPath
-                ),
                 contentScale = ContentScale.Crop,
-                contentDescription = ""
             )
 
             Column(
@@ -94,7 +94,7 @@ fun MovieItem(
 @Preview
 @Composable
 private fun MovieItemPreview() {
-    MovieItem(posterPath = "PosterPath",
+    MovieItemView(posterPath = "PosterPath",
         title = "MovieTitle",
         desc = "Movie Description",
         rating = "4.5")
