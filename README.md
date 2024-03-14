@@ -1,3 +1,7 @@
+##SpeakerDeck
+
+https://speakerdeck.com/tekinarslan/enhancing-network-communication-in-android-transitioning-from-rest-to-graphql
+
 ## Tech Stack
 
 * Multi-Module-Architecture
