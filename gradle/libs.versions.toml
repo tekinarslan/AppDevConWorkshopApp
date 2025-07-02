@@ -1,47 +1,43 @@
 [versions]
-targetSdk = "34"
-compileSdk = "34"
-minSdk = "24"
 
-compose-compiler = "1.5.8"
-agp = "8.3.0"
-kotlin = "1.9.22"
-org-jetbrains-kotlin-jvm = "1.9.22"
-coreKtx = "1.12.0"
+agp = "8.11.0"
+kotlin = "2.2.0"
+org-jetbrains-kotlin-jvm = "2.2.0"
+coreKtx = "1.16.0"
 junit = "4.13.2"
-activityCompose = "1.8.2"
-composeBom = "2024.02.01"
-coroutines = "1.7.3"
-hilt = "2.51"
-ksp = "1.9.22-1.0.18"
-androidx-lifecycle-compose = "2.7.0"
-androidx-lifecycle-runtime-compose = "2.7.0"
+activityCompose = "1.10.1"
+composeBom = "2025.06.01"
+coroutines = "1.10.2"
+hilt = "2.56.2"
+ksp = "2.2.0-2.0.2"
+androidx-lifecycle-compose = "2.9.1"
+androidx-lifecycle-runtime-compose = "2.9.1"
 androidxHiltNavigationCompose = "1.2.0"
-lifecycle = "2.7.0"
-coil = "2.5.0"
+lifecycle = "2.9.1"
+coil = "2.7.0"
 accompanist = "0.34.0"
 accompanistCoil = "0.15.0"
-composeNavigation = "2.7.7"
+composeNavigation = "2.9.1"
 androidx-palette = "1.0.0"
-junitVersion = "1.1.5"
-espressoCore = "3.5.1"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
 appcompat = "1.6.1"
 material = "1.11.0"
 kotlin-gradle = "1.9.21"
 dependencyGuard = "0.5.0"
-appcompatVersion = "1.6.1"
-materialVersion = "1.11.0"
-kotlinxDatetime = "0.5.0"
-kotlinxSerializationJson = "1.6.3"
+appcompatVersion = "1.7.1"
+materialVersion = "1.12.0"
+kotlinxDatetime = "0.7.0"
+kotlinxSerializationJson = "1.8.1"
 okhttp = "4.12.0"
-retrofit = "2.9.0"
+retrofit = "3.0.0"
 retrofitKotlinxSerializationJson = "1.0.0"
-compose-paging = "3.2.1"
-compose-lottie = "6.3.0"
-androidxTestCore = "1.5.0"
-androidxTestExt = "1.1.5"
-androidxTestRules = "1.5.0"
-androidxTestRunner = "1.5.2"
+compose-paging = "3.3.6"
+compose-lottie = "6.6.7"
+androidxTestCore = "1.6.1"
+androidxTestExt = "1.2.1"
+androidxTestRules = "1.6.1"
+androidxTestRunner = "1.6.2"
 androidxUiAutomator = "2.3.0"
 androidxEspresso = "3.5.1"
 
@@ -54,7 +50,6 @@ gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref 
 javax-inject = { module = "javax.inject:javax.inject", version = "1" }
 coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
 
 kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinxDatetime" }
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
@@ -65,7 +60,6 @@ hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", v
 hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
 
 accompanist-coil = { module = "com.google.accompanist:accompanist-coil", version.ref = "accompanistCoil" }
-coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 coil-kt = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
 coil-kt-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 coil-kt-svg = { group = "io.coil-kt", name = "coil-svg", version.ref = "coil" }
@@ -151,7 +145,6 @@ compose-ui = [
 ]
 
 coil = [
-    "coil",
     "coil-kt",
     "coil-gif",
     "coil-kt-compose",
@@ -198,6 +191,7 @@ accompanist = [
 
 
 [plugins]
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
